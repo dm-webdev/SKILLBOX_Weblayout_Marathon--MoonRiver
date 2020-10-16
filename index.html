@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Moon River - ювелирные изделия</title>
+  <link href="https://allfont.ru/allfont.css?fonts=forum" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=8941aad9-b29c-4f71-be96-d498cf86e841&lang=ru_RU"></script>
+</head>
+
+<body id="body" class="">
+  <header class="header">
+    <div class="header__bar">
+      <a class="header__logo" href="#">
+        <img src="img/frame_3/logo.png" alt="Moon River - ювелирные изделия">
+      </a>
+
+      <a class="favorites" href="#" aria-label="перейти к избранному"></a>
+
+      <a class="user__account" href="#" aria-label="перейти в личный кабинет"></a>
+
+      <a id="basket" class="shopping__basket" href="#" aria-label="перейти в корзину">
+        <span id="quantity">0</span>
+      </a>
+
+      <div id="basketContainer" class="full__basket basket-off clean">
+        <ul id="fullBasket">
+
+        </ul>
+      </div>
+
+      <button id="burger" class="header__bar__burger btn" aria-label="открыть меню">
+        <span class="burger__link"></span>
+        <span class="burger__link"></span>
+        <span class="burger__link"></span>
+      </button>
+    </div>
+
+    <section class="top__offer">
+      <div class="top-container">
+        <h1 class="top__offer__heading">HIGH JEWELRY</h1>
+
+        <p class="top__offer__link">
+          <a class="link-white top__offer__link__text" href="#">Смотреть коллекцию</a>
+        </p>
+      </div>
+
+      <div class="btn__group">
+        <button class="btn language__btn active_btn" type="button">RU</button>
+
+        <button class="btn language__btn" type="button">EN</button>
+      </div>
+
+      <article class="top__poster">
+        <img class="top__offer__img" src="img/frame_3/trinity.png" alt="КОЛЬЦО TRINITY, Cartier">
+
+        <h3 class="product__heading pos__1">
+          <a id="pos1" class="position link-black text-white" href="#">КОЛЬЦО TRINITY, Cartier</a>
+        </h3>
+
+        <p class="product__description">Белое золото, бриллианты</p>
+
+        <p class="product__price">498 000 ₽</p>
+
+        <div id="product1" class="purchase pos__1__pop clean pos__pop_off">
+          <img class="pos__1__img" src="img/popUp/trinity-mini.png" alt="КОЛЬЦО TRINITY, Cartier">
+
+          <h4 class="pos__1__hed">КОЛЬЦО TRINITY, Cartier</h4>
+
+          <p class="pos__1__price">498 000 ₽</p>
+
+          <p class="pos__1__desk">Белое золото, бриллианты</p>
+
+
+          <a class="pos__1__btn anchorBasket" href="#basket" aria-label="перейти к корзине"></a>
+        </div>
+      </article>
+    </section>
+  </header>
+
+  <main class="main">
+    <section class="for__man">
+      <a class="for__link link-black" href="#">
+        <p class="for__link__description">Перейти в раздел</p>
+
+        <h2 class="for__link__heading">Для мужчин</h2>
+
+        <span></span>
+      </a>
+    </section>
+
+    <section class="for__woman link-black">
+      <a class="for__link" href="#">
+        <p class="for__link__description">Перейти в раздел</p>
+
+        <h2 class="for__link__heading">Для женщин</h2>
+      </a>
+    </section>
+
+    <section class="map">
+      <div class="map__description">
+        <h2 class="map__description__heading">Найди бутик&nbsp;около&nbsp;себя</h2>
+
+        <p class="map__description__text">Введите свой адрес и узнайте о самых ближайших бутиках к вам</p>
+
+        <form class="map__form" onsubmit="return false">
+          <div id="alert" class="alert clean">
+            <p class="alert-text">Проверьте правильность ввода города. Для Вас магазины открыты в Москве,
+              Санкт-Петербурге, Самаре, Казане, Калининграде. Ждем Вас за покупками!
+              <button id="cleanAlert" class="cleanAlert btn" type="button" aria-label="удалить сообщение">
+                <span class="cross__link__black"></span>
+                <span class="cross__link__black"></span>
+              </button>
+            </p>
+          </div>
+          <input id="mapInput" class="map__form__input form__input" type="text" placeholder="Введите адрес">
+
+          <button id="mapBtn" class="map__form__btn form__btn btn" type="button" aria-label="отправить запрос"></button>
+        </form>
+      </div>
+
+      <div id="map" class="map__container"></div>
+    </section>
+
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог ювелирных изделий колекции HIGH JEWELRY</h2>
+
+      <article class="post__1 post__style">
+        <img class="post__img" src="img/frame_3/jows.png" alt="КОЛЬЦО jow’s, Cartier">
+
+        <h3 class="post__heading">
+          <a id="pos2" class="position post__heading__link" href="#">КОЛЬЦО jow’s, Cartier</a>
+        </h3>
+
+        <p class="post__description">Белое золото, бриллианты</p>
+
+        <p class="post__price">674 000 ₽</p>
+
+        <div id="product2" class="purchase pos__2__pop clean pos__pop_off">
+          <img class="pos__2__img " src="img/popUp/jows-mini.png" alt="КОЛЬЦО jow’s, Cartier">
+
+          <h4 class="pos__2__hed ">КОЛЬЦО jow’s, Cartier</h4>
+
+          <p class="pos__2__price ">674 000 ₽</p>
+
+          <p class="pos__2__desk ">Белое золото, бриллианты</p>
+
+          <a class="pos__2__btn anchorBasket" href="#basket" aria-label="перейти к корзине"></a>
+        </div>
+      </article>
+
+      <article class="post__2">
+        <img class="post__img__centre" src="img/frame_3/etoile.jpg" alt="КОлье etoile, HUBLOT">
+
+        <div class="post__2__absolute">
+          <h3 class="post__heading">
+            <a id="pos3" class="position post__heading__link post__2__heading" href="#">КОлье etoile, HUBLOT</a>
+          </h3>
+
+          <p class="post__description post__2__description">Белое золото, бриллианты</p>
+
+          <p class="post__price">539 000 ₽</p>
+        </div>
+
+        <div id="product3" class="purchase pos__2__pop clean pos__pop_off">
+          <img class="pos__2__img " src="img/popUp/etoile-mini.jpg" alt="КОлье etoile, HUBLOT">
+
+          <h4 class="pos__2__hed ">КОлье etoile, HUBLOT</h4>
+
+          <p class="pos__2__price ">539 000 ₽</p>
+
+          <p class="pos__2__desk ">Белое золото, бриллианты</p>
+
+          <a class="pos__2__btn anchorBasket" href="#basket" aria-label="перейти к корзине"></a>
+        </div>
+      </article>
+
+      <article class="post__3 post__style">
+        <img class="post__img" src="img/frame_3/moon.png" alt="Серьги moon, HUBLOT">
+
+        <h3 class="post__heading">
+          <a id="pos4" class="position post__heading__link" href="#">Серьги moon, HUBLOT</a>
+        </h3>
+
+        <p class="post__description">Желтое золото, сапфир</p>
+
+        <p class="post__price">498 000 ₽</p>
+
+        <div id="product4" class="purchase pos__2__pop clean pos__pop_off">
+          <img class="pos__2__img " src="img/popUp/moon-mini.png" alt="Серьги moon, HUBLOT">
+
+          <h4 class="pos__2__hed ">Серьги moon, HUBLOT</h4>
+
+          <p class="pos__2__price ">498 000 ₽</p>
+
+          <p class="pos__2__desk ">Желтое золото, сапфир</p>
+
+          <a class="pos__2__btn anchorBasket" href="#basket" aria-label="перейти к корзине"></a>
+        </div>
+      </article>
+
+      <article class="post__4 post__style">
+        <img class="post__img" src="img/frame_3/croix.png" alt="КОЛЬЦО croix, Cartier">
+
+        <h3 class="post__heading">
+          <a id="pos5" class="position post__heading__link" href="#">КОЛЬЦО croix, Cartier</a>
+        </h3>
+
+        <p class="post__description">Желтое, белое, розовое золото</p>
+
+        <p class="post__price">432 000 ₽</p>
+
+        <div id="product5" class="purchase pos__2__pop clean pos__pop_off">
+          <img class="pos__2__img " src="img/popUp/croix-mini.png" alt="КОЛЬЦО croix, Cartier">
+
+          <h4 class="pos__2__hed ">КОЛЬЦО croix, Cartier</h4>
+
+          <p class="pos__2__price ">432 000 ₽</p>
+
+          <p class="pos__2__desk ">Желтое, белое, розовое золото</p>
+
+          <a class="pos__2__btn anchorBasket" href="#basket" aria-label="перейти к корзине"></a>
+        </div>
+      </article>
+
+      <article class="post__5 post__style">
+        <img class="post__img" src="img/frame_3/win.png" alt="серьги win, BLANCPAIN">
+
+        <h3 class="post__heading">
+          <a id="pos6" class="position post__heading__link" href="#">серьги win, BLANCPAIN</a>
+        </h3>
+
+        <p class="post__description">Желтое золото, жемчуг</p>
+
+        <p class="post__price">398 000 ₽</p>
+
+        <div id="product6" class="purchase pos__2__pop clean pos__pop_off">
+          <img class="pos__2__img " src="img/popUp/win-mini.png" alt="серьги win, BLANCPAIN">
+
+          <h4 class="pos__2__hed ">серьги win, BLANCPAIN</h4>
+
+          <p class="pos__2__price ">398 000 ₽</p>
+
+          <p class="pos__2__desk ">Желтое золото, жемчуг</p>
+
+          <a id="anchorBasket" class="pos__2__btn anchorBasket" href="#basket" aria-label="перейти к корзине"></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="in__social">
+      <h2 class="social__heading">Мы в&nbsp;социальных&nbsp;сетях</h2>
+
+      <div class="slider">
+        <!-- <img src="img/frame_3/slide-1.jpg" alt="слайдер1"> -->
+        <img class="slider__img" src="img/frame_3/slide-2.jpg" alt="слайдер2">
+        <!-- <img src="img/frame_3/slide-3.jpg" alt="слайдер3">
+        <img src="img/frame_3/slide-4.jpg" alt="слайдер4"> -->
+      </div>
+
+      <div class="container">
+        <ul class="social__link">
+          <li class="social__link__item">
+            <a class="facebook" href="#" aria-label="переход на страницу в facebook"></a>
+          </li>
+          <li>
+            <a class="instagramm" href="" aria-label="переход на страницу в instagramm"></a>
+          </li>
+        </ul>
+
+        <div class="pagination"></div>
+      </div>
+
+
+    </section>
+
+    <section class="contact">
+      <h2 class="contact__heading">телефон флагманского магазина</h2>
+
+      <p class="contact__link">
+        <a class="text-grey" href="tel:+7800456456" target="_blank">+7 800 456 456</a>
+      </p>
+
+      <p class="contact__form__heading">подпишитесь на новости</p>
+
+      <form class="contact__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+        <input class="contact__form__input form__input" type="email" name="email" placeholder="Введите E-mail">
+
+        <button class="form__btn contact__form__btn btn" type="submit" aria-label="отправить запрос"></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <ul class="footer__nav__list">
+        <li class="footer__nav__list__item">
+          <a href="#" class="text-footer link-black">работа в компании</a>
+        </li>
+        <li class="footer__nav__list__item">
+          <a href="#" class="text-footer link-black">условия пользования</a>
+        </li>
+        <li class="footer__nav__list__item">
+          <a href="#" class="text-footer link-black">выходные данные</a>
+        </li>
+        <li class="footer__nav__list__item">
+          <a href="#" class="text-footer link-black">политика конфиденциальности</a>
+        </li>
+        <li class="footer__nav__list__item">
+          <a href="#" class="text-footer link-black">карта сайта</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__bar">
+      <a class="footer__logo" href="#">
+        <img src="img/frame_3/logoBlack.png" alt="Moon River - ювелирные изделия">
+      </a>
+
+      <address class="footer__contact">
+        <p class="text-footer footer__contact__text">телефон горячей линии</p>
+
+        <a class="footer__link" href="tel:+7800456456" target="_blank">+7 800 456 456</a>
+
+        <ul class="social__link">
+          <li class="social__link__item social__link__footer">
+            <a class="facebook" href="#" aria-label="переход на страницу в facebook"></a>
+          </li>
+          <li>
+            <a class="instagramm" href="" aria-label="переход на страницу в instagramm"></a>
+          </li>
+        </ul>
+      </address>
+
+      <div class="footer__right">
+        <p class="text-footer footer__contact__text">подпишитесь на новости</p>
+
+        <form class="contact__form contact__form__footer" action="https://jsonplaceholder.typicode.com/posts"
+          method="POST">
+          <input class="map__form__input form__input" type="email" name="email" placeholder="Введите E-mail">
+
+          <button class="form__btn map__form__btn btn" type="submit" aria-label="отправить запрос"></button>
+        </form>
+
+        <ul class="social__link">
+          <li class="social__link__app">
+            <a class="app__store" href="#" aria-label="переход на страницу в App Store"></a>
+          </li>
+          <li>
+            <a class="google__play" href="" aria-label="переход на страницу в Google Play"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div id="popUp" class="popUp">
+    <div class="popUp__header__bar">
+      <a class="popUp__header__logo" href="#">
+        <img src="img/frame_3/logoBlack.png" alt="Moon River - ювелирные изделия">
+      </a>
+
+      <a class="popUp__favorites" href="#" aria-label="перейти к избранному"></a>
+
+      <a class="popUp__user__account" href="#" aria-label="перейти в личный кабинет"></a>
+
+      <a class="popUp__shopping__basket" href="#" aria-label="перейти в корзину">1</a>
+
+      <button id="cross" class="popUp__cross btn" aria-label="открыть меню">
+        <span class="cross__link"></span>
+        <span class="cross__link"></span>
+      </button>
+    </div>
+
+    <nav class="main__menu">
+      <ul class="main__menu__list">
+        <li class="main__menu__list__item">
+          <a class="main__menu-text" href="#">Ювелирные изделия</a>
+        </li>
+        <li class="main__menu__list__item">
+          <a class="main__menu-text" href="#">часы</a>
+        </li>
+        <li class="main__menu__list__item">
+          <a class="main__menu-text" href="#">ароматы</a>
+        </li>
+        <li class="main__menu__list__item">
+          <a class="main__menu-text" href="#">бренды</a>
+        </li>
+        <li class="main__menu__list__item">
+          <a class="main__menu-text" href="#">изделия из кожи</a>
+        </li>
+        <li class="main__menu__list__item">
+          <a class="main__menu-text" href="#">Свадебные украшения</a>
+        </li>
+        <li class="main__menu__list__item">
+          <a class="main__menu-text" href="#">другое</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="submenu">
+      <ul class="submenu__list">
+        <li class="submenu__list__item">
+          <a class="submenu-text link-black" href="#">для кого</a>
+          <ul class="nested__list">
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Для женщин</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Для мужчин</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Для детей</a>
+            </li>
+          </ul>
+        </li>
+        <li class="submenu__list__item">
+          <a class="submenu-text link-black" href="#">Категории</a>
+          <ul class="nested__list">
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Кольца</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Браслеты</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Колье</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Серьги</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Броши</a>
+            </li>
+          </ul>
+        </li>
+        <li class="submenu__list__item">
+          <a class="submenu-text link-black" href="#">материал</a>
+          <ul class="nested__list">
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Изделия с&nbsp;бриллиантами</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Желтое золото</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Белое золото</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Розовое золото</a>
+            </li>
+          </ul>
+        </li>
+        <li class="submenu__list__item">
+          <a class="submenu-text link-black" href="#">бренд</a>
+          <ul class="nested__list">
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Mercury</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Chopard</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Cartier</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Graff</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text link-black" href="#">Garrard</a>
+            </li>
+            <li class="nested__list__items">
+              <a class="nested-text-gold link-black" href="#">Показать все бренды</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="popUp__footer">
+      <div class="popUp__footer__left">
+        <p class="popUp__footer__left__text">Новая коллекция by Mercury</p>
+        <h2 class="popUp__footer__left__heading">JUSTE UN CLOU</h2>
+        <a class="popUp__footer__left__link link-black" href="#">Cмотреть коллекцию</a>
+      </div>
+
+      <div class="popUp__footer__right">
+        <div>
+          <p class="text-footer footer__contact__text">телефон горячей линии</p>
+
+          <a class="footer__link" href="tel:+7800456456" target="_blank">+7 800 456 456</a>
+
+          <ul class="social__link popUp__footer__social__link">
+            <li class="social__link__footer social__link__popUp">
+              <a class="facebook" href="#" aria-label="переход на страницу в facebook"></a>
+            </li>
+            <li>
+              <a class="instagramm" href="" aria-label="переход на страницу в instagramm"></a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-footer footer__contact__text">подпишитесь на новости</p>
+
+          <form class="contact__form__popUp" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+            <input class="map__form__input form__input" type="email" name="email" placeholder="Введите E-mail">
+
+            <button class="form__btn map__form__btn btn" type="submit" aria-label="отправить запрос"></button>
+          </form>
+
+          <ul class="social__link">
+            <li class="social__link__app">
+              <a class="app__store" href="#" aria-label="переход на страницу в App Store"></a>
+            </li>
+            <li>
+              <a class="google__play" href="" aria-label="переход на страницу в Google Play"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
